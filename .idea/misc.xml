@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/arrow_back.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/arrow_back.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/background_breackfirst_item.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/border02.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/border_bottom_tab.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/border_button_pizza.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/border_img.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/bottom_nav_color.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/breakfirst_border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/button_border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/button_start_border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/cookingtutorial_border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/filter_border.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/home_selector.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_bookmark1.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_camera.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_home1.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_home_sel.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.1025" />
+        <entry key="app/src/main/res/layout/activity_cooking.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_pizza.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_book_mark.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_cooking.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_person.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_pizza.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_bookmark.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_breackfast.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_chefe.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_contact_details.xml" value="0.242914979757085" />
+        <entry key="app/src/main/res/layout/row_data_cooking.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_ingrediant.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/row_data_tranding.xml" value="0.19375" />
+        <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.19375" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

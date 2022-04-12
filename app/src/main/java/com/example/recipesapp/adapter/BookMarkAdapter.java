@@ -10,19 +10,18 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.example.recipesapp.Activity.PizzaActivity;
-import com.example.recipesapp.Model.TrandingNowDataModel;
+import com.example.recipesapp.Model.BookMarkDataModel;
 import com.example.recipesapp.R;
 
 import java.util.ArrayList;
 
-public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHolder>  {
+public class BookMarkAdapter extends RecyclerView.Adapter<BookMarkAdapter.ViewHolder> {
     private Activity homeActivity;
-    private final ArrayList<TrandingNowDataModel> mData;
+    private final ArrayList<BookMarkDataModel> mData;
 
     // data is passed into the constructor
-    public TrendingAdapter(ArrayList<TrandingNowDataModel> data, Activity homeActivity) {
+    public BookMarkAdapter(ArrayList<BookMarkDataModel> data, Activity homeActivity) {
         this.mData = data;
         this.homeActivity=homeActivity;
     }
@@ -31,30 +30,28 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem= layoutInflater.inflate(R.layout.row_data_tranding, parent, false);
-        TrendingAdapter.ViewHolder viewHolder = new TrendingAdapter.ViewHolder(listItem);
+        View listItem= layoutInflater.inflate(R.layout.row_data_bookmark, parent, false);
+        BookMarkAdapter.ViewHolder viewHolder = new BookMarkAdapter.ViewHolder(listItem);
         return viewHolder;
     }
 
     // binds the data to the TextView in each row
     @Override
-    public void onBindViewHolder(TrendingAdapter.ViewHolder holder, int position) {
-        TrandingNowDataModel animal = mData.get(position);
+    public void onBindViewHolder(BookMarkAdapter.ViewHolder holder, int position) {
+        BookMarkDataModel animal = mData.get(position);
         holder.textviewName.setText(animal.getItemName());
         holder.textviewKcal.setText(animal.getKcal());
         holder.textvieTime.setText(animal.getTime());
         holder.imageviewPizza.setImageResource(mData.get(position).getImageItem());
+        //   holder.imageLogo.setImageResource(mData.get(position).getChefImagelogo());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(homeActivity,PizzaActivity.class);
-                i.putExtra("kacl",animal.getKcal());
-                i.putExtra("itemImage",animal.getImageItem());
-                i.putExtra("itemName",animal.getItemName());
-                i.putExtra("Time",animal.getTime());
-                homeActivity.startActivity(i);
+
             }
         });
+
     }
 
     // total number of rows
@@ -75,6 +72,7 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHo
             imageviewPizza=itemView.findViewById(R.id.imageViewPizza);
             textviewKcal = itemView.findViewById(R.id.textViewKcal);
             textvieTime=itemView.findViewById(R.id.textViewTime);
+
         }
     }
 }

@@ -1,11 +1,15 @@
-package com.example.recipesapp.Activity;
+package com.example.recipesapp.Fragment;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.recipesapp.Model.BreakfirstDatamodel;
 import com.example.recipesapp.Model.ChefsDatamodel;
@@ -17,24 +21,27 @@ import com.example.recipesapp.adapter.TrendingAdapter;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity {
+
+public class HomeFragment extends Fragment {
     RecyclerView recycleBreakFirst, recyclePopulatChefs, recycleTrendingNow;
     private ArrayList<BreakfirstDatamodel> arrayListBreakfirst = new ArrayList<>();
     private ArrayList<ChefsDatamodel> arrayListChefs = new ArrayList<>();
     private ArrayList<TrandingNowDataModel> arrayListTrending = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-//        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-        setContentView(R.layout.activity_home);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        recycleBreakFirst = (RecyclerView) findViewById(R.id.recycleViewBreakFirst);
-        recyclePopulatChefs = (RecyclerView) findViewById(R.id.recycleViewPopulatChefs);
-        recycleTrendingNow = (RecyclerView) findViewById(R.id.recycleViewTrendingNow);
+        recycleBreakFirst = (RecyclerView) view.findViewById(R.id.recycleViewBreakFirst);
+        recyclePopulatChefs = (RecyclerView) view.findViewById(R.id.recycleViewPopulatChefs);
+        recycleTrendingNow = (RecyclerView) view.findViewById(R.id.recycleViewTrendingNow);
         addDataChefs();
         addDataBreackFirst();
         addDataTranding();
+
+        return view;
+
     }
 
     private void addDataBreackFirst() {
@@ -68,8 +75,8 @@ public class HomeActivity extends AppCompatActivity {
         BreakfirstDatamodel3.setKcal("500 kacl");
         BreakfirstDatamodel3.setChefsName("Shera Paji");
         arrayListBreakfirst.add(BreakfirstDatamodel3);
-        BreakfirstAdapter adapterBreakfirst = new BreakfirstAdapter(arrayListBreakfirst, HomeActivity.this);
-        recycleBreakFirst.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        BreakfirstAdapter adapterBreakfirst = new BreakfirstAdapter(arrayListBreakfirst, getActivity());
+        recycleBreakFirst.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recycleBreakFirst.setAdapter(adapterBreakfirst);
     }
 
@@ -93,8 +100,8 @@ public class HomeActivity extends AppCompatActivity {
         ChefsDatamodel3.setChefsImage(R.drawable.cowboy);
         arrayListChefs.add(ChefsDatamodel3);
 
-        ChefsAdapter adapterChefs = new ChefsAdapter(arrayListChefs, HomeActivity.this);
-        recyclePopulatChefs.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        ChefsAdapter adapterChefs = new ChefsAdapter(arrayListChefs,getActivity());
+        recyclePopulatChefs.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclePopulatChefs.setAdapter(adapterChefs);
 
     }
@@ -117,8 +124,8 @@ public class HomeActivity extends AppCompatActivity {
         TrandingNowDataModel2.setTime("25 mints");
         arrayListTrending.add(TrandingNowDataModel2);
 
-        TrendingAdapter adapterTrending = new TrendingAdapter(arrayListTrending, HomeActivity.this);
-        recycleTrendingNow.setLayoutManager(new GridLayoutManager(this, 2));
+        TrendingAdapter adapterTrending = new TrendingAdapter(arrayListTrending, getActivity());
+        recycleTrendingNow.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recycleTrendingNow.setNestedScrollingEnabled(false);
         recycleTrendingNow.setAdapter(adapterTrending);
 

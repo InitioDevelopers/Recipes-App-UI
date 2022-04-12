@@ -1,5 +1,6 @@
 package com.example.recipesapp.adapter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recipesapp.Activity.HomeActivity;
 import com.example.recipesapp.Activity.PizzaActivity;
 import com.example.recipesapp.Model.BreakfirstDatamodel;
 import com.example.recipesapp.R;
@@ -17,11 +17,11 @@ import com.example.recipesapp.R;
 import java.util.ArrayList;
 
 public class BreakfirstAdapter extends RecyclerView.Adapter<BreakfirstAdapter.ViewHolder> {
-     private HomeActivity homeActivity;
+     private Activity homeActivity;
     private final ArrayList<BreakfirstDatamodel> mData;
 
     // data is passed into the constructor
-    public BreakfirstAdapter(ArrayList<BreakfirstDatamodel> data, HomeActivity homeActivity) {
+    public BreakfirstAdapter(ArrayList<BreakfirstDatamodel> data, Activity homeActivity) {
         this.mData = data;
         this.homeActivity=homeActivity;
     }

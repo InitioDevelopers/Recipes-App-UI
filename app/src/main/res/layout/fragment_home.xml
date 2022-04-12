@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
-    android:orientation="vertical"
-    tools:context=".Activity.HomeActivity">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/relativeMainHading"
@@ -175,5 +174,6 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

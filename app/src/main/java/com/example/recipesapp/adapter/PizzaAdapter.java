@@ -1,5 +1,6 @@
 package com.example.recipesapp.adapter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +19,11 @@ import com.example.recipesapp.R;
 import java.util.ArrayList;
 
 public class PizzaAdapter extends RecyclerView.Adapter<PizzaAdapter.ViewHolder> {
-    private PizzaActivity pizzaActivity;
+    private Activity pizzaActivity;
     private final ArrayList<PizzaDatamodel> mData;
 
     // data is passed into the constructor
-    public PizzaAdapter(ArrayList<PizzaDatamodel> data, PizzaActivity pizzaActivity) {
+    public PizzaAdapter(ArrayList<PizzaDatamodel> data, Activity pizzaActivity) {
         this.mData = data;
         this.pizzaActivity=pizzaActivity;
     }

@@ -1,5 +1,6 @@
 package com.example.recipesapp.adapter;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,11 @@ import com.example.recipesapp.R;
 import java.util.ArrayList;
 
 public class CookingAdapter extends RecyclerView.Adapter<CookingAdapter.ViewHolder> {
-    private CookingActivity cookingActivity;
+    private Activity cookingActivity;
     private final ArrayList<CookingDatamodel> mData;
 
     // data is passed into the constructor
-    public CookingAdapter(ArrayList<CookingDatamodel> data, CookingActivity cookingActivity) {
+    public CookingAdapter(ArrayList<CookingDatamodel> data, Activity cookingActivity) {
         this.mData = data;
         this.cookingActivity=cookingActivity;
     }

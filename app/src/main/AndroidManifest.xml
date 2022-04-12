@@ -16,7 +16,7 @@
             android:name=".Activity.PizzaActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.HomeActivity"
+            android:name=".Activity.MainActivity"
 
             android:exported="true">
             <intent-filter>
